@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #F7ECDA;
+}
+
+input {outline: none;}
+
+/* 네브바 시작 */
+
+.navbar {
+    font-family: 'GangwonEdu_OTFBoldA';
+    /* 스크롤 내려도 navbar상단 고정 */
+    top: 0;
+    /* 스크롤 내려도 navbar상단 고정 */
+    padding-top: 0;
+    margin-top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 5vw;
+}
+
+#logo_leo {
+    width: 5vw;
+    height: auto;
+}
+
+.nav_menu {
+    grid-column: 1;
+    display: flex;
+    align-items: center;  /* 세로정렬 */
+    justify-self: left;
+}
+
+.nav_menu li {
+    margin-right: 6vw;
+} /* 단어 간격 */
+
+.nav_user {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-self: right;
+    margin-right: 3vw;
+}
+
+.nav_user li {
+    margin-left: 1vw;
+} /* 단어 간격 */
+
+.nav_li {
+    color: #8F87A7;
+    text-decoration: none;
+    font-size: 1.6vw;
+} /* 왜인지 부모요소에서 적용하면 안 먹어서... */
+
+#nav_slash {
+	padding-top: 0.7vw; /* a 태그 안에 넣으면 안 먹음 */
+}
+
+#nav_part {
+	padding-top: 0.7vw; /* a 태그 안에 넣으면 안 먹음. 왜? */
+}
+
+#logo_nav_img {
+	padding: 0.4vw;
+}
+
+#nav_part:hover {
+    color: #403964;
+}/* id로 하면 되고 class로 하면 왜 안 되지...? */
+
+ul {
+    list-style:none;
+}
+
+#list_now {
+	color: #403964;
+}
+
+/* 네브바 끝 */
+
+form {
+    margin-top: 10vh;
+    margin-left: 2rem;
+    width: 40vw;
+    height: 40vh;
+}
+
+.edit-btn {
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: #A79EB3;
+    border-radius: 5px;
+    border: solid #707070 1px;
+    background-color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 15px;
+    margin-left: 7px;
+}
+.edit-btn:hover {
+    color: #403964;
+}
+
+th > label {
+    display: none;
+}
+
+#id_p_title {
+    width: 40vw;
+    height: 20px;
+    border: 1px solid #707070;
+    border-radius: 3px;
+}
+
+#id_p_body {
+    font-family: 'Pretendard-Regular';
+    width: 40vw;
+    height: 40vh;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    outline: none;
+}
+
+#id_p_photo {
+    color: #A79EB3;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+#id_hashtags {
+    font-family: 'Pretendard-Regular';
+}

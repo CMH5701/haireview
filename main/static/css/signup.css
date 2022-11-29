@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    /* background-image: url("img.png"); */
+    background-color: #403964;
+}
+
+/* 바탕 이미지 */
+.back_img_h {
+    grid-column: 2;
+    display: flex;
+    width: 42vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    margin-left: 50vw;
+    pointer-events: none;
+}
+
+/* 전체 컨테이너 */
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+    padding-right: 25vw;
+}
+
+/* form 컨테이너 */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 25vw;
+}
+
+/* 아이디, 비밀번호 input */
+#id_username,
+#id_password1,
+#id_password2 {
+    background-color: #403964;
+    border: none;
+    float: right;
+    width: 16vw;
+    border-bottom: 1px solid white;
+}
+
+/* 회원가입 버튼 */
+.signup-btn {
+    background-color: #8F87A7;
+    font-family: 'Pretendard-Regular';
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    width: 25vw;
+    height: 5vh;
+    margin-top: 8vh;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    color: #8F87A7;
+    background-color: #FFFFFF;
+}
+
+/* 불필요한 문구 없애기 */
+ul,
+span {
+    display: none;
+}
+
+/* 입력 글자 색 */
+label {
+    color: white;
+}
+
+/* input 클릭했을 때 강조X */
+input {
+    outline: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    /* 전체 컨테이너 */
+    .signup-container {
+        padding: 0;
+        margin-top: 14vh;
+    }
+
+    /* form 컨테이너 */
+    .container {
+        width: 70vw;
+    }
+
+    /* 아이디, 비밀번호 input */
+    #id_username,
+    #id_password1,
+    #id_password2 {
+        width: 45vw;
+    }
+
+    /* 회원가입 버튼 */
+    .signup-btn {
+        width: 70vw;
+    }
+
+    /* 유효성 검사 */
+    .word {font-size: 3vw;}
+}
+
+.signup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8vh;
+}
+
+.id-input,
+.password-input,
+.password2-input {
+    font-family: 'GangwonEdu_OTFBoldA';
+    color: white;
+}
+
+.word {
+    font-family: 'Pretendard-Regular';
+    color: white;
+    margin-top: 1rem;
+    font-size: 1vw;
+    opacity: 0.33;
+}
