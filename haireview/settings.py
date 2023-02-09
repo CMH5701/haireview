@@ -43,6 +43,15 @@ ALLOWED_HOSTS = ['*']
 
 
 # Application definition
+AUTHENTICATION_BACKENDS = [
+    
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,8 +66,21 @@ INSTALLED_APPS = [
     'free.apps.FreeConfig',
     'main.apps.MainConfig',
     'bookmark.apps.BookmarkConfig',
+    #create부분(글꼴,글자색 등)
 	'django_summernote',
+    # 카카오톡 소셜 로그인 관련 부분
+    'django.contrib.sites',
+    'allauth',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
 ]
+
+SITE_ID = 1
+
+
+LOGIN_REDIRECT_URL = '/'  # 로그인 후 리다이렉트 될 경로
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+ACCOUNT_LOGOUT_ON_GET = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

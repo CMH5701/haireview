@@ -44,6 +44,7 @@ urlpatterns = [
     path('', include('free.urls')),
     path('', include('QnA.urls')),
     path('', include('bookmark.urls')),
+    path(r'^accounts/', include('allauth.urls')),
 	path('summernote/', include('django_summernote.urls')),
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

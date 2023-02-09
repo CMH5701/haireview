@@ -1,5 +1,6 @@
 {% load static %}
-
+{% load socialaccount %}
+{% get_providers as socialaccount_providers %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,9 +28,17 @@
         {% endblock %}
         <div class="container2">
             <a class="signup" href="{% url 'signup' %}">회원가입</a>
+
             <span class="login-first">머리뷰에 처음이시라면..!</span>
+            
+
+            <a href="{% provider_login_url 'kakao' method='oauth2' %}">
+                카카오톡 회원가입
+            </a>
+            
         </div>
     </div>
+    
 </body>
 
 </html>

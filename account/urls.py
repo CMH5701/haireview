@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from account import views  
 
 urlpatterns = [
@@ -10,5 +10,5 @@ urlpatterns = [
     path('mypage/<str:username>/', views.mypage, name='mypage'),
     path('password/', views.password, name='password'),
     path('profile_edit/', views.profile_edit, name='profile_edit'),
-    
+    path(r'^accounts/', include('allauth.urls')),
 ]
